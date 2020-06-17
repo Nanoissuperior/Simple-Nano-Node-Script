@@ -41,7 +41,7 @@ read -p "Press enter to confirm you have enough disk space (shown above). If you
 echo "Ok, lets do this!"
 docker pull nanocurrency/nano
 echo "Setting up node"
-docker run --restart=unless-stopped -d   -p 7075:7075/udp   -p 7075:7075   -p 127.0.0.1:7076:7076   -v /home/:/root   --name nano_node   nanocurrency/nano:latest
+docker run --restart=unless-stopped -d  -p 7075:7075   -p 127.0.0.1:7076:7076   -v /home/:/root   --name nano_node   nanocurrency/nano:latest
 sleep 6
 echo "Nice, lets do a blockcount check"
 echo
@@ -68,6 +68,7 @@ echo
 docker start nano_node
 echo "lets check those blocks"
 echo
+sleep 6
 curl -d '{ "action" : "block_count" }' 127.0.0.1:7076
 echo
 echo "Okay I am all done here, you now have a fully synced node!" 
