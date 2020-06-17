@@ -22,23 +22,18 @@ echo Time to install docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
 echo Just need to run another update
 sudo apt-get update -y 
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 echo "Docker is installed :)" 
 #Install nano node and download ledger 
 echo "Time to do the fun stuff (Nano)"
-echo "docs.nano.org reccomend that you have at least 80GB free on your server before setting up a node, please see '/' below and press enter to confirm you have enough space avalible."
+echo
+echo
+sleep 4
+echo "docs.nano.org reccomend that you have at least 80GB free on your server before setting up a node, please see '/' below as this is where the node will be installed."
 df -h
 read -p "Press enter to confirm you have enough disk space (shown above). If you do not you can press ctrl + C to cancel this script and free up space before running again."
 echo "Ok"
