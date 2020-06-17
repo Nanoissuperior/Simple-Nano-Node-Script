@@ -34,9 +34,11 @@ echo
 echo
 sleep 4
 echo "docs.nano.org reccomend that you have at least 80GB free on your server before setting up a node, please see '/' below as this is where the node will be installed."
+echo
 df -h
+echo
 read -p "Press enter to confirm you have enough disk space (shown above). If you do not you can press ctrl + C to cancel this script and free up space before running again."
-echo "Ok"
+echo "Ok, lets do this!"
 docker pull nanocurrency/nano
 echo "Setting up node"
 docker run --restart=unless-stopped -d   -p 7075:7075/udp   -p 7075:7075   -p 127.0.0.1:7076:7076   -v /home/:/root   --name nano_node   nanocurrency/nano:latest
@@ -44,16 +46,22 @@ sleep 6
 echo "Nice, lets do a blockcount check"
 echo
 curl -d '{ "action" : "block_count" }' 127.0.0.1:7076
-echo "Nice"
+echo "Node running, but lets get this node synced"
 echo
 docker stop nano_node
 cd /home/Nano
+echo
 echo "Ok this next part takes a while, currently downloading the ledger from mynano.ninja"
+echo
 wget "https://mynano.ninja/api/ledger/download" -O ledger.7z
+echo
 echo "Phew, thats over, lets carry on"
+echo
 mv data.ldb data.ldb.old
 mv data.ldb-lock data.ldb-lock.old
-echo "This can take a little while"
+echo
+echo "This can also take a little while"
+echo
 7z e ledger.7z
 echo "looking good"
 echo
@@ -63,7 +71,7 @@ echo
 curl -d '{ "action" : "block_count" }' 127.0.0.1:7076
 echo
 echo "Okay I am all done here, you now have a fully synced node!" 
-echo "For any aditional options check out the docs!"
+echo "For any aditional options check out the docs or ask for help in discord!"
 echo "NanoIsSuperior"
 
 
