@@ -1,6 +1,8 @@
 # nano node script
 A script to setup a nano node
 
+Please check docs.nano.org for specs your server should have.
+
 Following docs.nano.org guide to setup a node can be confusing for some. 
 This script involves running only a couple lines of code and will leave you with a fully synced node.
 
