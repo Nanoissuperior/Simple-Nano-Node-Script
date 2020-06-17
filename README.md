@@ -6,3 +6,9 @@ This script involves running only a couple lines of code and will leave you with
 
 
 This script will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
+
+
+1) Download
+2) chmod +x nodesetup.sh
+3) ./nodesetup.sh
+
