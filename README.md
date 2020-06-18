@@ -2,6 +2,7 @@
 ### A script to setup a nano node
 
 Following docs.nano.org guide to setup a node can be confusing for some. This script will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
+(Script based on Ubuntu Server running as a sudo user)
 
 1) Download
 2) `chmod +x nodesetup.sh`
