@@ -1,17 +1,16 @@
 # Simple Nano Node Script
-A script to setup a nano node
+### A script to setup a nano node
 
-Please check docs.nano.org for specs your server should have.
-
-Following docs.nano.org guide to setup a node can be confusing for some. 
-
-This script will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
+Following docs.nano.org guide to setup a node can be confusing for some. This script will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
 
 1) Download
 2) `chmod +x nodesetup.sh`
 3) `./nodesetup.sh`
 4) Enjoy
---
+
+- Please note you should only use this script from a trusted source. 
+- You are responsible for the results of running this scipt on your server.
+- If you get stuck find me on discord and tell me.
 
 ## Node Requirements
 The following are minimum recommended specifications for non-voting nodes and Represntative nodes with less than 0.1% of the online voting weight (regular Representatives):
