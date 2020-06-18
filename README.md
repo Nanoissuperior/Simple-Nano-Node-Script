@@ -9,6 +9,8 @@ Following docs.nano.org guide to setup a node can be confusing for some. This sc
 3) `./nodesetup.sh`
 4) Enjoy
 
+You will receive some prompts along the way, respond to these when needed.
+
 - Please note you should only use this script from a trusted source. 
 - You are responsible for the results of running this scipt on your server.
 - If you get stuck find me on discord and tell me.
