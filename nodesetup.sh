@@ -22,12 +22,16 @@ echo Time to install docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
 echo Just need to run another update
 sudo apt-get update -y 
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y -s
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
 sudo apt-get update -s
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y -s
-echo "Docker is installed :)" 
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y 
+echo "
+ +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+
+ |D|o|c|k|e|r| |i|s| |i|n|s|t|a|l|l|e|d| |:|)|
+ +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+
+" 
 
 #Install nano node and download ledger 
 echo "Time to do the fun stuff (Nano)"
@@ -41,6 +45,7 @@ read -p "Press enter to confirm you have enough disk space (shown above). If you
 echo "Ok, lets do this!"
 docker pull nanocurrency/nano
 echo "Setting up node"
+
 docker run --restart=unless-stopped -d  -p 7075:7075   -p 127.0.0.1:7076:7076   -v /home/:/root   --name nano_node   nanocurrency/nano:latest
 
 #Check Docker was created and is running
@@ -49,7 +54,7 @@ then
     echo "Docker Running!"
 
 else
-    echo "Not running!"
+    echo "The Docker is not running, something has gone wrong. The script is exiting"
     exit 
 fi
 
@@ -92,7 +97,7 @@ if [ -e "$file" ]; then
     echo "For any aditional options check out the docs or ask for help in discord!"
     echo "NanoIsSuperior"
 else
-    echo "Ledger failed to download, visit Nanos discord for more help"
+    echo "Ledger failed to download, visit Nano discord for more help"
     exit
 fi
 
