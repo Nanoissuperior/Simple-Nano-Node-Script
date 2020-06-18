@@ -10,8 +10,8 @@ echo "I am just going to install what is needed (curl, wget, 7zip)"
 echo
 echo
 #Setup server requirements.
-apt-get update -y -s
-apt-get upgrade -y -s
+apt-get update -y 
+apt-get upgrade -y 
 apt-get install curl -y 
 apt-get install wget -y 
 apt install p7zip-full p7zip-rar -y 
@@ -25,7 +25,7 @@ sudo apt-get update -y
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
-sudo apt-get update -s
+sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y 
 echo "
  +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+
@@ -54,7 +54,7 @@ then
     echo "Docker Running!"
 
 else
-    echo "The Docker is not running, something has gone wrong. The script is exiting"
+    echo "Something has gone wrong. The script is exiting"
     exit 
 fi
 
