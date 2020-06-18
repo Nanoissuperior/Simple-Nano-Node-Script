@@ -12,9 +12,9 @@ echo
 #Setup server requirements.
 apt-get update -y -s
 apt-get upgrade -y -s
-apt-get install curl -y -s
-apt-get install wget -y -s
-apt install p7zip-full p7zip-rar -y -s
+apt-get install curl -y 
+apt-get install wget -y 
+apt install p7zip-full p7zip-rar -y 
 echo 
 echo
 #Installing Docker
