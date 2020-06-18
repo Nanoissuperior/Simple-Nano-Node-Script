@@ -15,7 +15,12 @@ Following docs.nano.org guide to setup a node can be confusing for some. This sc
 ## Node Requirements
 The following are minimum recommended specifications for non-voting nodes and Represntative nodes with less than 0.1% of the online voting weight (regular Representatives):
 
-2GB RAM (additional RAM or swap space may be needed if bootstrapping a new node from scratch)
-Dual-Core CPU
-100 Mbps bandwidth (2TB or more of available monthly bandwidth)
-SSD-based hard drive with 80GB+ of free space
+- 2GB RAM 
+- Dual-Core CPU
+- 100 Mbps bandwidth (2TB or more of available monthly bandwidth)
+- SSD-based hard drive with 80GB+ of free space
+
+## Further information
+For more information on Nano Nodes visit : https://docs.nano.org/running-a-node/overview/ 
+
+Ledger pulled from https://mynano.ninja
