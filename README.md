@@ -19,7 +19,7 @@ You will receive some prompts along the way, respond to these when needed.
 
 - Please note you should only use this script from a trusted source. 
 - You are responsible for the results of running this scipt on your server.
-- This script will run an apt upgrade, if you do not want this comment out the line.
+- This script may run an apt upgrade, if you do not want this comment out the line.
 - If you get stuck find me on discord and tell me.
 
 ## Node Requirements
