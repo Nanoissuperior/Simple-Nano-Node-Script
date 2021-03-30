@@ -5,8 +5,10 @@
 # Simple Nano Node Script
 ### A script to setup a nano node
 
-Following docs.nano.org guide to setup a node can be confusing for some. This script will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
+Following docs.nano.org guide to setup a node can be confusing for some. This script will setup a nano node from start to finish. It will install server requirements, pull the latest docker image and download a synced ledger with some nice feedback along the way. 
 (Script based on Ubuntu Server running as a sudo user)
+
+It is advised that you run this on a fresh installation of Ubuntu, please check node requirements shown below 
 
 1) git clone
 2) `chmod +x nodesetup.sh`
@@ -29,6 +31,8 @@ The following are minimum recommended specifications for non-voting nodes and Re
 - SSD-based hard drive with 80GB+ of free space
 
 ## Further information
-For more information on Nano Nodes visit : https://docs.nano.org/running-a-node/overview/ 
+-RPC will not be enabled, to do so edit /home/Nano/config=rpc.toml and then restart the node.
 
-Ledger pulled from https://mynano.ninja
+-For more information on Nano Nodes visit : https://docs.nano.org/running-a-node/overview/ 
+
+-Ledger pulled from https://mynano.ninja
