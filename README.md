@@ -31,7 +31,7 @@ The following are minimum recommended specifications for non-voting nodes and Re
 - SSD-based hard drive with 80GB+ of free space
 
 ## Further information
--RPC will not be enabled, to do so edit /home/Nano/config=rpc.toml and then restart the node.
+-RPC will not be enabled, to do so edit /home/Nano/config-rpc.toml and then restart the node.
 
 -For more information on Nano Nodes visit : https://docs.nano.org/running-a-node/overview/ 
 
