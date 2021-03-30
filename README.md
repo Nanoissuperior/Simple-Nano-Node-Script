@@ -1,3 +1,7 @@
+![image](https://user-images.githubusercontent.com/50946350/113024019-2d7cea00-917e-11eb-99be-c7d829b4485d.png)
+
+
+
 # Simple Nano Node Script
 ### A script to setup a nano node
 
