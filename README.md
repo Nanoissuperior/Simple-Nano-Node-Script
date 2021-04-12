@@ -10,7 +10,7 @@ Following docs.nano.org guide to setup a node can be confusing for some. This sc
 
 It is advised that you run this on a fresh installation of Ubuntu, please check node requirements shown below. Although this script has been tested it may still have bugs.
 
-1) git clone
+1) git clone https://github.com/Nanoissuperior/Simple-Nano-Node-Script.git
 2) `chmod +x nodesetup.sh`
 3) `./nodesetup.sh`
 4) Enjoy
