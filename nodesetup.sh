@@ -100,17 +100,18 @@ wget "https://mynano.ninja/api/ledger/download" -O ledger.7z
 file=./ledger.7z
 if [ -e "$file" ]; then
     echo "File exists, ledger downloaded"
-    echo
-    echo "Phew, thats over, lets carry on"
+    clear
+    echo "Phew, ledger downloaded, now i need to extract it"
     echo
     mv data.ldb data.ldb.old
     mv data.ldb-lock data.ldb-lock.old
     echo
-    echo "This can also take a little while"
+    echo "This can also take a little while, dont worry."
     echo
     7z e ledger.7z
     echo "looking good"
     echo
+    clear
     docker start nano_node
     echo "lets check those blocks"
     echo
