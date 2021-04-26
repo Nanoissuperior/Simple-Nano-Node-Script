@@ -114,6 +114,7 @@ if [ -e "$file" ]; then
     clear
     docker start nano_node
     echo "lets check those blocks"
+    echo "If the following line fails please wait 5 mins and run ' curl -d '{ "action" : "block_count" }' 127.0.0.1:7076 ' as sometimes there are delays "
     echo
     sleep 6
     curl -d '{ "action" : "block_count" }' 127.0.0.1:7076
